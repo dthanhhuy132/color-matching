@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Matching</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="background">
+      <div class="game">
+        <div class="game__cover game__cover-show">Click Start</div>
+        <h1 class="game__title">Color matching</h1>
+        <div class="game__timer">30 s</div>
+
+        <div class="game__board">
+          <ul>
+            <li class="active">
+              <div class="cover overlay"></div>
+            </li>
+            <li>
+              <div class="cover overlay"></div>
+            </li>
+            <li>
+              <div class="cover overlay"></div>
+            </li>
+            <li>
+              <div class="cover overlay"></div>
+            </li>
+            <li>
+              <div class="cover overlay"></div>
+            </li>
+            <li>
+              <div class="cover overlay"></div>
+            </li>
+            <li>
+              <div class="cover overlay"></div>
+            </li>
+            <li>
+              <div class="cover overlay"></div>
+            </li>
+            <li>
+              <div class="cover overlay"></div>
+            </li>
+            <li>
+              <div class="cover overlay"></div>
+            </li>
+            <li>
+              <div class="cover overlay"></div>
+            </li>
+            <li>
+              <div class="cover overlay"></div>
+            </li>
+            <li>
+              <div class="cover overlay"></div>
+            </li>
+            <li>
+              <div class="cover overlay"></div>
+            </li>
+            <li>
+              <div class="cover overlay"></div>
+            </li>
+            <li>
+              <div class="cover overlay"></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="game__button">
+          <button class="btn btn-start">Start</button>
+          <button class="btn btn-play-again">Play Again</button>
+        </div>
+
+        <div class="game__setting">
+          <div class="game__setting-icon">
+            <i class="fas fa-cogs"></i>
+            <i class="fas fa-times close close-show"></i>
+          </div>
+
+          <div class="game__setting-display">
+            <div class="display__aware">
+              <i class="fas fa-trophy"></i>
+              <p class= 'display__show'>Best</p>
+              <span class= 'display__show'>:</span>
+              <h5>--</h5>
+            </div>
+
+            <div class="display__timer">
+              <i class="far fa-clock"></i>
+              <p class= 'display__show'>Time</p>
+              <span class='display__show'>:</span>
+              <input type='text' class='game__setting-time display__input display__show' id='time'
+              placeholder='Min is 01s'/>
+              <h5 class="animate__animated animate__headShake animate__repeat-2">30s</h5>
+            </div>
+
+            <div class="game__setting-save">Save Setting</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.6.1/randomColor.min.js" integrity="sha512-vPeZ7JCboHcfpqSx5ZD+/jpEhS4JpXxfz9orSvAPPj0EKUVShU2tgy7XkU+oujBJKnWmu4hU7r9MMQNWPfXsYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script type="module" src="./js/main.js"></script>
+</html>
