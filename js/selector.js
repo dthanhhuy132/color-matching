@@ -45,3 +45,7 @@ export function getPerformance() {
 export function getTotalTime() {
   return document.querySelector(".display__timer h5");
 }
+
+export function getTimerCounter() {
+  return document.querySelector(".game__timer");
+}

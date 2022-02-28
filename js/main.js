@@ -13,6 +13,7 @@ import {
   getSaveSettingBtn,
   getPerformance,
   getTotalTime,
+  getTimerCounter,
 } from "./selector.js";
 
 let background = getBackground();
@@ -21,6 +22,7 @@ let gameCover = getGameCover();
 let cellList = getElementList();
 let bestPerformance = getPerformance();
 let totalTimeValue = getTotalTime();
+let timerCounter = getTimerCounter();
 
 let PAIR_COLORS = 8;
 let BEST_PERFROMANCE = "--";
@@ -82,6 +84,11 @@ cellList.forEach((cell) => {
         }
         createTimer.clear();
       }
+
+      if (countResult == PAIR_COLORS) {
+        gameCover.classList.add("game__cover-show");
+        gameCover.innerText = "Ghê quá ta";
+      }
     } else {
       if (pairColor.length < 2) return;
       clearTimeoutResetTempArr = setTimeout(() => resetTempArr(), 1000);
@@ -101,11 +108,12 @@ function handleTimerChange(time) {
   let fullSecond = `0${time}`.slice(-2);
   timer.innerText = `${fullSecond} s`;
 }
+
 function handleTimerFinish() {
   gameCover.classList.add("game__cover-show");
   if (countResult === PAIR_COLORS) {
-    gameCover.innerText = "Đù, Ghê vãi";
-  } else gameCover.innerText = "Haha, Ngu vãi";
+    gameCover.innerText = "Ghê quá ta";
+  } else gameCover.innerText = "Cố lên bạn";
 }
 
 // ----------------START THE GAME FOR THE FIRST TIME
@@ -183,11 +191,19 @@ saveSettingBtn.addEventListener("click", changeSetting);
 
 function changeSetting() {
   if (GAME_TIME !== Number(settingTempValue) && settingTempValue > 0) {
-    console.log("change setting run");
     GAME_TIME = Number(settingTempValue);
-    resetGame(GAME_TIME);
     let newTime = `0${settingTempValue}`.slice(-2);
     totalTimeValue.innerText = `${newTime}s`;
+    timerCounter.innerText = `${newTime}s`;
+
+    cellList.forEach((cell) => {
+      cell.children[0].classList.add("overlay");
+      // gameCover.classList.remove("game__cover-show");
+      createTimer.clear();
+      // createTimer.start(GAME_TIME);
+      loadInitGame();
+    });
+
     closeSettingGame();
     inputEl.value = "";
   }
@@ -196,5 +212,3 @@ function changeSetting() {
 function closeSettingGame() {
   settingDisplay.classList.remove("game__setting-show");
 }
-
-// Having not modify setting completely

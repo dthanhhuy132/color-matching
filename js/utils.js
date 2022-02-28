@@ -40,7 +40,6 @@ export const countDown = ({ time, onChange, onFinish }) => {
   let intervalID = null;
 
   function start(time) {
-    console.log("time trong ultil: ", time);
     let currentTime = time;
     intervalID = setInterval(() => {
       onChange?.(currentTime);

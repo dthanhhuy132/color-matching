@@ -18,8 +18,8 @@ body {
 .game {
   position: relative;
   top: 50%;
-  left: 40%;
-  transform: translate(-50%,-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,10 +30,10 @@ body {
   padding-top: 20px;
 
   background-color: #fff;
-  border-radius:10px;
+  border-radius: 10px;
 }
 
-.game__cover-show{
+.game__cover-show {
   content: "";
   position: absolute;
   top: 0;
@@ -44,21 +44,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  border-radius:10px;
+
+  border-radius: 10px;
   color: #fff;
-  font-size:3rem;
-  
-  background-color: rgba(0,0,0,0.5);
+  font-size: 3rem;
+
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 5;
 }
 
-
 .game__title {
-  color: #7D3C98;
+  color: #7d3c98;
   text-transform: uppercase;
   font-weight: 700;
-  font-size:1.5rem;
+  font-size: 1.5rem;
 }
 
 .game__timer {
@@ -70,17 +69,17 @@ body {
   display: flex;
   width: 300px;
   flex-flow: row wrap;
-  gap: 7px
+  gap: 7px;
 }
 
 li {
   width: calc(25% - 7px);
-  height: calc(300px/4 - 7px);
+  height: calc(300px / 4 - 7px);
   list-style-type: none;
 
-  background:blue;
+  background: blue;
   border-radius: 3px;
-  
+
   position: relative;
 }
 
@@ -101,9 +100,8 @@ li {
 }
 
 .overlay {
-  bottom: 10px;
+  bottom: 0px;
 }
-
 
 .game__button {
   margin-top: 20px;
@@ -116,7 +114,7 @@ li {
   padding: 10px;
   color: #fff;
 
-  border-radius:5px;
+  border-radius: 5px;
   border: none;
 
   font-size: 1.3rem;
@@ -126,14 +124,13 @@ li {
 }
 
 .btn:hover {
-  filter: brightness(120%)
+  filter: brightness(120%);
 }
 
 .btn-start {
   position: absolute;
-  background-color: #2ECC71;
+  background-color: #2ecc71;
 }
-
 
 .game__cover-show ~ .game__button .btn-start {
   animation: light 0.5s ease-in-out forwards infinite alternate;
@@ -145,7 +142,7 @@ li {
 
 @keyframes light {
   0% {
-    filter: brightness(100%)
+    filter: brightness(100%);
   }
   50% {
     filter: brightness(125%);
@@ -156,11 +153,9 @@ li {
 }
 
 .btn-play-again {
-  background-color: #E74C3C;
+  background-color: #e74c3c;
   display: none;
 }
-
-
 
 /* GAME SETTING */
 .game__setting {
@@ -173,7 +168,7 @@ li {
   justify-content: center;
   align-items: center;
   flex-flow: column wrap;
-  
+
   padding: 10px;
 
   border-radius: 10px;
@@ -189,7 +184,7 @@ li {
 }
 
 .game__setting-icon {
-  font-size:3rem;
+  font-size: 3rem;
   border-bottom: 2px solid grey;
   padding-bottom: 5px;
 }
@@ -204,13 +199,12 @@ li {
 
   display: none;
 
-  font-size:30px;
+  font-size: 30px;
   padding: 15px;
   color: grey;
-  
+
   cursor: pointer;
 }
-
 
 .game__setting .close:hover {
   color: red;
@@ -218,20 +212,20 @@ li {
 
 .game__setting-display {
   padding-top: 10px;
-  font-size: 1.5rem
+  font-size: 1.5rem;
 }
 
 .game__setting-show .close {
   display: block;
 }
 .game__setting-show .game__setting-display {
-  padding-bottom: 20px
+  padding-bottom: 20px;
 }
 
 .game__setting-display div {
-  padding:5px;
+  padding: 5px;
   display: flex;
-  align-items:center;
+  align-items: center;
   flex: 1;
 }
 
@@ -240,17 +234,17 @@ li {
   min-width: 35px;
 }
 .game__setting-display div p {
-  min-width: 70px
+  min-width: 70px;
 }
 
 .game__setting-display div span {
-  min-width: 10px
+  min-width: 10px;
 }
 
 .game__setting-display div input {
   width: 110px;
   height: 30px;
- 
+
   padding-left: 5px;
   margin-right: 5px;
   border-radius: 5px;
@@ -259,10 +253,9 @@ li {
   transition: all 0.3s ease-in-out;
 }
 
-.game__setting:hover input{
+.game__setting:hover input {
   background-color: #fff;
 }
-
 
 .game__setting-display div h5 {
   font-size: 1.5rem;
@@ -272,7 +265,7 @@ li {
   display: none;
 }
 
-.game__setting-show .display__show{
+.game__setting-show .display__show {
   display: block;
 }
 
@@ -286,10 +279,10 @@ li {
   border-radius: 5px;
   background-color: rgb(136, 134, 134);
   border: 2px solid grey;
-  font-size:1.5rem;
+  font-size: 1.5rem;
 
   display: none !important;
-  
+
   cursor: pointer;
   transform: translateX(-50%);
 
@@ -298,10 +291,9 @@ li {
 
 .game__setting:hover .game__setting-save {
   transition: all 0.2s ease-in-out;
-  background-color: #6495ED;
+  background-color: #6495ed;
 }
 .game__setting-show .game__setting-save {
   display: block !important;
   text-align: center;
 }
-
